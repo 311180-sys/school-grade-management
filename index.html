@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>學生成績管理系統</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>學生成績管理系統</h1>
+
+    <section class="panel control-panel">
+      <div class="input-group">
+        <input id="nameInput" type="text" placeholder="學生姓名" />
+        <input id="scoreInput" type="number" min="0" max="100" step="0.1" placeholder="成績" />
+        <button id="addBtn">新增</button>
+      </div>
+
+      <div class="toolbar">
+        <input id="searchInput" type="text" placeholder="搜尋學生姓名" />
+        <button id="searchBtn">搜尋</button>
+        <button id="showAllBtn">顯示全部</button>
+        <button id="averageBtn">計算平均</button>
+      </div>
+
+      <div class="summary">
+        <p>平均成績：<span id="averageScore">--</span></p>
+      </div>
+    </section>
+
+    <section class="panel table-panel">
+      <table>
+        <thead>
+          <tr>
+            <th>姓名</th>
+            <th>成績</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="studentTableBody"></tbody>
+      </table>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
